@@ -1,1 +1,1 @@
-This is a simple implementation of 360 home page
+这是360主页的简单实现
