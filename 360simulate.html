@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="./css/liuindex.css"/>
+
+</head>
+<body>
+<div id="dowebok">
+    <div class="section">
+        <div class="logo">
+            <img src="./images/logo.png" alt=""/>
+        </div>
+        <div class="text">
+            <img src="./images/text_1.png" alt=""/>
+            <img src="./images/text_2.png" alt=""/>
+            <img src="./images/text_3.png" alt=""/>
+            <img src="./images/text_4.png" alt=""/>
+            <img src="./images/text_5.png" alt=""/>
+            <img src="./images/text_6.png" alt=""/>
+            <img src="./images/text_7.png" alt=""/>
+            <img src="./images/text_8.png" alt=""/>
+        </div>
+        <div class="info">
+            <img src="./images/info_1.png" alt=""/>
+        </div>
+
+    </div>
+    <div class="section">
+        <div class="shield">
+            <img src="./images/shield_1.png" alt=""/>
+            <img src="./images/shield_2.png" alt=""/>
+            <img src="./images/shield_3.png" alt=""/>
+            <img src="./images/shield_4.png" alt=""/>
+            <img src="./images/shield_5.png" alt=""/>
+            <img src="./images/shield_6.png" alt=""/>
+            <img src="./images/shield_7.png" alt=""/>
+            <img src="./images/shield_8.png" alt=""/>
+            <img src="./images/shield_9.png" alt=""/>
+        </div>
+        <div class="info">
+            <img src="./images/info_2.png" alt=""/>
+        </div>
+    </div>
+    <div class="section">
+        <div class="info">
+            <img src="./images/info_3.png" alt=""/>
+        </div>
+        <div class="circle">
+            <img src="./images/circle.png" alt=""/>
+        </div>
+        <div class="rocket">
+            <img src="./images/rocket.png" alt=""/>
+        </div>
+    </div>
+    <div class="section">
+        <div class="search">
+            <img src="./images/search.png" alt=""/>
+            <div class="key">
+                <img src="./images/key.png" alt=""/>
+            </div>
+            <div class="resule">
+                <img src="./images/result.png" alt=""/>
+            </div>
+        </div>
+
+        <div class="info">
+            <img src="./images/info_4.png" alt=""/>
+        </div>
+    </div>
+    <div class="section">
+        <div class="info">
+            <img src="./images/info_5.png" alt=""/>
+        </div>
+        <div class="toolbar">
+            <span class="list toolbarTop"></span>
+            <span class="list toolbarBottom"></span>
+            <span class="list toolbarLeft"></span>
+            <span class="list toolbarRight"></span>
+            <div class="toolbar-img">
+                <img src="./images/toolbar.png" alt=""/>
+                <div class="img-bian"></div>
+            </div>
+            <div class="extra">
+                <img src="./images/extra.png" alt=""/>
+                <div class="extra-bian"></div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.fullpage.min.js"></script>
+<script>
+    $(function () {
+        $('#dowebok').fullpage({
+            // 我要给每一个section添加背景颜色
+            sectionsColor: ['#0da5d6', '#2AB561', '#DE8910', '#16BA9D', '#0DA5D6'],
+            css3: true,
+            afterLoad: function () {
+                // console.log($(this));
+                $('.section').removeClass('current');
+                var _this = $(this);
+                setTimeout(function () {
+                    _this.addClass('current');
+                    // 为什么要加延时 是因为这个插件有些问题
+                }, 200)
+            }
+        });
+    });
+</script>
+</body>
+</html>
